@@ -21,13 +21,13 @@ router.use(authenticate);
 
 router.post(
     "/",
-    authorize("FLEET_MANAGER"),
+    authorize("SAFETY_OFFICER"),
     createMaintenanceController
 );
 
 router.patch(
     "/:maintenanceId/complete",
-    authorize("FLEET_MANAGER"),
+    authorize("SAFETY_OFFICER"),
     completeMaintenanceController
 );
 
