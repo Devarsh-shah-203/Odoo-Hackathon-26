@@ -2,7 +2,7 @@ import transporter from "../config/mailer.js";
 import nodemailer from "nodemailer";
 import ApiError from "../utils/ApiError.js";
 
-import WelcomeEmail from "../templates/WelcomeEmail.template.js";
+import WelcomeEmployeeTemplate from "../templates/WelcomeEmail.template.js";
 
 
 export const sendEmail = async ({
@@ -10,12 +10,8 @@ export const sendEmail = async ({
     subject,
     html,
 }) => {
-    console.log("Patient email:", to);
     if (!to) {
-        throw new ApiError(
-            400,
-            "Recipient email is required."
-        );
+        throw new ApiError(400, "Recipient email is required.");
     }
 
     await transporter.sendMail({
@@ -24,7 +20,27 @@ export const sendEmail = async ({
         subject,
         html,
     });
+};
 
+export const sendWelcomeEmployeeEmail = async ({
+    name,
+    role,
+    email,
+    temporaryPassword,
+}) => {
+
+    const html = WelcomeEmployeeTemplate({
+        name,
+        role,
+        email,
+        temporaryPassword,
+    });
+
+    await sendEmail({
+        to: email,
+        subject: "Welcome to TransitOps 🚛",
+        html,
+    });
 };
 
  export const SendVerificationCode = async (UserMail) => {
