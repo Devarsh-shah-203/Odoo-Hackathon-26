@@ -17,7 +17,7 @@ const app = express();
 
 
 app.use(cors({ // frontend on 3000 and backend on 8000
-    origin: ['http://localhost:8000', 'http://localhost:5173'],
+    origin: ['http://localhost:8000', 'http://localhost:8080'],
     credentials: true,
   }));
 
