@@ -6,6 +6,7 @@ import morgan from "morgan";
 import authRoutes from "./routes/auth.route.js";
 import tripRoutes from "./routes/trip.route.js";
 import maintenanceRoutes from "./routes/maintenance.routes.js";
+import fuelRoutes from "./routes/fuel.routes.js";
 
 const app = express();
 
@@ -34,6 +35,7 @@ app.use(cookieParser());
 app.use("/api/auth", authRoutes);
 app.use("/api/trips", tripRoutes);
 app.use("/api/maintenance", maintenanceRoutes);
+app.use("/api/fuel", fuelRoutes);
 
 app.get("/", (req, res) => {
   res.status(200).json({
