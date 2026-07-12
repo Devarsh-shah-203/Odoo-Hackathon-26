@@ -10,6 +10,7 @@ import maintenanceRoutes from "./routes/maintenance.routes.js";
 import fuelRoutes from "./routes/fuel.routes.js";
 import employeeRoutes from "./routes/Employe.routes.js"
 import dashboardRoutes from "./routes/dashboard.routes.js";
+import reportRoutes from "./routes/report.routes.js";
 
 import vehiclesRoutes from "./routes/vehicle.routes.js"
 const app = express();
@@ -42,8 +43,7 @@ app.use("/api/maintenance", maintenanceRoutes);
 app.use("/api/fuel", fuelRoutes);
 app.use("/api/manager",employeeRoutes)
 app.use("/api/dashboard", dashboardRoutes);
-app.use("/api/vehicles", vehiclesRoutes);
-
+app.use("/api/reports", reportRoutes);
 
 app.get("/", (req, res) => {
   res.status(200).json({
