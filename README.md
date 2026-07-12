@@ -202,86 +202,6 @@ TransitOps automatically enforces the following rules:
 
 ---
 
-## 📂 Project Structure
-
-```
-TransitOps/
-│
-├── frontend/
-│   ├── src/
-│   ├── public/
-│   └── package.json
-│
-├── backend/
-│   ├── src/
-│   │   ├── controllers/
-│   │   ├── models/
-│   │   ├── routes/
-│   │   ├── middlewares/
-│   │   ├── services/
-│   │   └── utils/
-│   └── package.json
-│
-└── README.md
-```
-
----
-
-## ⚙ Installation
-
-### Clone Repository
-
-```bash
-git clone https://github.com/yourusername/TransitOps.git
-```
-
----
-
-### Backend Setup
-
-```bash
-cd backend
-
-npm install
-
-npm run dev
-```
-
----
-
-### Frontend Setup
-
-```bash
-cd frontend
-
-npm install
-
-npm run dev
-```
-
----
-
-## 🔑 Environment Variables
-
-Backend `.env`
-
-```env
-PORT=5000
-
-MONGODB_URL=
-
-ACCESS_TOKEN_SECRET=
-
-ACCESS_TOKEN_EXPIRY=
-
-REFRESH_TOKEN_SECRET=
-
-REFRESH_TOKEN_EXPIRY=
-
-CORS_ORIGIN=http://localhost:5173
-```
-
----
 
 ## 📌 API Modules
 
@@ -312,20 +232,7 @@ CORS_ORIGIN=http://localhost:5173
 
 ---
 
-## 👨‍💻 Team
 
-| Member | Responsibility |
-|---------|----------------|
-| Member 1 | Backend |
-| Member 2 | Backend |
-| Member 3 | Frontend |
-| Member 4 | Frontend |
-
----
-
-## 📄 License
-
-This project was developed for the **Odoo Hackathon 2026** and is intended for educational and demonstration purposes.
 
 ---
 
