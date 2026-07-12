@@ -3,8 +3,8 @@ import cors from "cors";
 import helmet from "helmet";
 import cookieParser from "cookie-parser";
 import morgan from "morgan";
-import authRoutes from "./routes/auth.routes.js";
-import employeeRoutes from "./routes/Employe.routes.js"
+import authRoutes from "./routes/auth.route.js";
+import tripRoutes from "./routes/trip.route.js";
 
 const app = express();
 
@@ -32,6 +32,7 @@ app.use(cookieParser());
 
 app.use("/api/auth", authRoutes);
 app.use("/api/manager",employeeRoutes)
+app.use("/api/trips", tripRoutes);
 
 app.get("/", (req, res) => {
   res.status(200).json({
