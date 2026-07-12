@@ -35,6 +35,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/manager",employeeRoutes)
 app.use("/api/trips", tripRoutes);
 
+
 app.get("/", (req, res) => {
   res.status(200).json({
     success: true,
