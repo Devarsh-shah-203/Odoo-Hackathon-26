@@ -3,8 +3,9 @@ import cors from "cors";
 import helmet from "helmet";
 import cookieParser from "cookie-parser";
 import morgan from "morgan";
-import authRoutes from "./routes/auth.route.js";
+import authRoutes from "./routes/auth.routes.js";
 import tripRoutes from "./routes/trip.route.js";
+import employeeRoutes from "./routes/Employe.routes.js"
 
 const app = express();
 
